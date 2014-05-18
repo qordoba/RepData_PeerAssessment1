@@ -245,8 +245,7 @@ max_interval
 <p>We can fill the missing values with the average of each day</p>
 
 <pre><code class="r">## b &lt;- steps_per_day &lt;- aggregate(steps ~ date, data, sum)$steps na_indices
-## &lt;- which(is.na(data$steps)) c &lt;- steps[is.na(steps)] s &lt;- split(data,
-## data$date)
+## &lt;- which(is.na(data$steps)) s &lt;- split(data, data$date)
 
 </code></pre>
 
@@ -309,6 +308,8 @@ mean_of_data_new2
 
 <pre><code>## [1] 10395
 </code></pre>
+
+<h3>As expected the values shift to bigger values when replacing the NA with the mean of the values, and the values shift to smaller when replacing the NA with a 0 value</h3>
 
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>
 

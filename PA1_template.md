@@ -89,8 +89,7 @@ We can fill the missing values with the average of each day
 
 ```r
 ## b <- steps_per_day <- aggregate(steps ~ date, data, sum)$steps na_indices
-## <- which(is.na(data$steps)) c <- steps[is.na(steps)] s <- split(data,
-## data$date)
+## <- which(is.na(data$steps)) s <- split(data, data$date)
 
 ```
 
@@ -179,4 +178,9 @@ median(steps_per_day_new2)
 ```
 
 
+
+### As expected the values shift to bigger values when replacing the NA with the mean of the values, and the values shift to smaller when replacing the NA with a 0 value
+
+
 ## Are there differences in activity patterns between weekdays and weekends?
+
